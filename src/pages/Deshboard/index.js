@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { useSelector } from "react-redux";
 import {
   format,
   subDays,
@@ -14,7 +15,6 @@ import { utcToZonedTime } from "date-fns-tz";
 import pt from "date-fns/locale/pt";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { AiFillPlusCircle } from "react-icons/ai";
-import { Redirect } from "react-router-dom";
 import history from "../../services/history";
 
 import { Container, Time } from "./styles";
@@ -25,6 +25,7 @@ const range = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 export default function Deshboard() {
   const [schedule, setSchedules] = useState([]);
   const [date, setDate] = useState(new Date());
+  const [pedidos, setPedidos] = useState([]);
 
   const dataFormatted = useMemo(
     () => format(date, "d 'de' MMMM", { locale: pt }),
@@ -56,6 +57,21 @@ export default function Deshboard() {
     loadSchedule();
   }, [date]);
 
+  console.log(schedule);
+
+  const ped = useSelector((state) => state.cadastroPedido);
+
+  useEffect(() => {
+    setPedidos(ped);
+
+    // const mapPed = pedidos.pedido.map((pedd) => {
+    //   format(pedd.dhCriacao, "HH:mm");
+    //   return pedd;
+    // });
+
+    // console.log(mapPed);
+  }, [pedidos]);
+
   function handlePrevDay() {
     setDate(subDays(date, 1));
   }
@@ -67,6 +83,7 @@ export default function Deshboard() {
   function handledRedirectCadastro() {
     return history.push("/cadastro");
   }
+
   return (
     <Container>
       <div>

@@ -6,3 +6,12 @@ export function pedidoRequestInSucess(pedido) {
     },
   };
 }
+
+export function pedidoRequestInRequest(pedido) {
+  return {
+    type: "@pedido/REQUEST_IN_PEDIDO",
+    payload: {
+      ...pedido,
+    },
+  };
+}

@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 
 import { Container } from "./styles";
-import { pedidoRequestInSucess } from "../../store/modules/pedido/actions";
+import { pedidoRequestInRequest } from "../../store/modules/pedido/actions";
 
 export default function CadastroProdo() {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ export default function CadastroProdo() {
   });
 
   function handleSubmit(props) {
-    dispatch(pedidoRequestInSucess(props));
+    dispatch(pedidoRequestInRequest(props));
   }
 
   return (
