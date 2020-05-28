@@ -9,6 +9,8 @@ import SignIn from "../pages/SignIn";
 import Deshboard from "../pages/Deshboard";
 import Profile from "../pages/Profile";
 import CadastroProduto from "../pages/CadastroProduto";
+import Produto from "../pages/Produto";
+import CarinhoProduto from "../pages/Produto/listaProdutos";
 
 export default function Routers() {
   return (
@@ -18,6 +20,8 @@ export default function Routers() {
       <Route path="/deshboard" component={Deshboard} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
       <Route path="/cadastro" component={CadastroProduto} isPrivate />
+      <Route path="/produto" component={Produto} isPrivate />
+      <Route path="/carinho" component={CarinhoProduto} isPrivate />
       <Route path="/" component={() => <h1>404</h1>} />
     </Switch>
   );

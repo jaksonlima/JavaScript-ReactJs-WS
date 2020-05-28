@@ -2,11 +2,13 @@ import React from "react";
 import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 
 import { Container } from "./styles";
-import { pedidoRequestInRequest } from "../../store/modules/pedido/actions";
+import { pedidoStatePedidoSucess } from "../../store/modules/pedido/actions";
+import history from "../../services/history";
 
-export default function CadastroProdo() {
+export default function CadastroProduto() {
   const dispatch = useDispatch();
 
   const schema = Yup.object().shape({
@@ -24,7 +26,14 @@ export default function CadastroProdo() {
   });
 
   function handleSubmit(props) {
-    dispatch(pedidoRequestInRequest(props));
+    if (props) {
+      dispatch(pedidoStatePedidoSucess(props));
+      toast.success("Cadastro pedido realizado com sucesso");
+    }
+  }
+
+  function handleProduto() {
+    history.push("/produto");
   }
 
   return (
@@ -41,6 +50,10 @@ export default function CadastroProdo() {
 
         <button type="submit">Cadastrar</button>
       </Form>
+
+      <button type="button" onClick={handleProduto}>
+        Adicionar produto
+      </button>
     </Container>
   );
 }

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { darken } from "polished";
 
 export const Container = styled.div`
   width: 600px;
@@ -8,14 +7,32 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  div {
+  header {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 
-    h1 {
+    span {
       color: #fff;
       font-weight: bold;
       font: 30px "Rototo", sans-serif;
+    }
+
+    img {
+      height: 64px;
+    }
+
+    button {
+      height: 60px;
+      width: 60px;
+      border-radius: 4px;
+      border: 1px solid #dcdce6;
+      background: transparent;
+      margin: 0 0 5px 16px;
+      transition: border-color 0.2s;
+    }
+    button:hover {
+      border-color: #999;
     }
   }
 
@@ -38,43 +55,11 @@ export const Container = styled.div`
       }
     }
 
-    button {
-      margin: 5px 0 0;
-      height: 44px;
-      background: #3b9eff;
-      font-weight: bold;
-      color: #fff;
-      border: 0;
-      border-radius: 4px;
-      font-size: 16px;
-      transform: background 0.2s;
-
-      &:hover {
-        background: ${darken(0.03, "#3b9eff")};
-      }
-    }
-
     span {
       color: #fb6f91;
       align-self: flex-start;
       margin: 0 0 10px;
       font-weight: bold;
-    }
-  }
-
-  button {
-    margin: 5px 0 0;
-    height: 44px;
-    background: #2ed961;
-    font-weight: bold;
-    color: #fff;
-    border: 0;
-    border-radius: 4px;
-    font-size: 16px;
-    transform: background 0.2s;
-
-    &:hover {
-      background: ${darken(0.03, "#2ed961")};
     }
   }
 `;

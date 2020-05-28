@@ -57,19 +57,10 @@ export default function Deshboard() {
     loadSchedule();
   }, [date]);
 
-  console.log(schedule);
-
   const ped = useSelector((state) => state.cadastroPedido);
 
   useEffect(() => {
     setPedidos(ped);
-
-    // const mapPed = pedidos.pedido.map((pedd) => {
-    //   format(pedd.dhCriacao, "HH:mm");
-    //   return pedd;
-    // });
-
-    // console.log(mapPed);
   }, [pedidos]);
 
   function handlePrevDay() {
