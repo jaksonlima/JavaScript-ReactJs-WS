@@ -7,7 +7,6 @@ const INITIAL_STATE = {
 
 export default function pedido(state = INITIAL_STATE, action) {
   return produce(state, (draft) => {
-    // console.log(action);
     switch (action.type) {
       case "@pedido/REQUEST_IN_SUCESS": {
         // draft.pedido = { ...action.payload };
@@ -29,6 +28,17 @@ export default function pedido(state = INITIAL_STATE, action) {
           ),
           1
         );
+        break;
+      }
+      case "@pedido/STATE_PRODUTO_EDITAR": {
+        console.log(action.payload);
+
+        const data =
+          draft.produtos[
+            draft.produtos.findIndex((todo) => todo.id === action.payload.id)
+          ];
+
+        console.log(data);
         break;
       }
     }

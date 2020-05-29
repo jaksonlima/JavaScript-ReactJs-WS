@@ -43,11 +43,11 @@ export function pedidoStateProdutoRemove(idProduto) {
   };
 }
 
-export function pedidoStateProdutoEditar(idProduto) {
+export function pedidoStateProdutoEditar(produto) {
   return {
     type: "@pedido/STATE_PRODUTO_EDITAR",
     payload: {
-      id: idProduto,
+      ...produto,
     },
   };
 }

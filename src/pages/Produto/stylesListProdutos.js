@@ -70,17 +70,17 @@ export const Container = styled.div`
 
       strong {
         display: block;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
         color: #41414d;
       }
 
       p + strong {
-        margin-top: 32px;
+        margin-top: 15px;
       }
 
       p {
         color: #737380;
-        line-height: 21px;
+        line-height: 1px;
         font-size: 16px;
       }
     }

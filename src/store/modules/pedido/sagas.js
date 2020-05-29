@@ -8,8 +8,6 @@ export function* requestIn({ payload: pedido }) {
   try {
     const reponse = yield call(apiPort("8080").put, "pedido", { ...pedido });
 
-    console.log(reponse);
-
     if (reponse && reponse.status === 201) {
       yield put(pedidoRequestInSucess(reponse.data));
 

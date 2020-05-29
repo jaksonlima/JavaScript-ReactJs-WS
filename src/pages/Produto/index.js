@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
