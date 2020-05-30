@@ -8,7 +8,7 @@ import SignIn from "../pages/SignIn";
 
 import Deshboard from "../pages/Deshboard";
 import Profile from "../pages/Profile";
-import CadastroProduto from "../pages/CadastroProduto";
+import CadastroProduto from "../pages/CadastroPedido";
 import Produto from "../pages/Produto";
 import CarinhoProduto from "../pages/Produto/listaProdutos";
 

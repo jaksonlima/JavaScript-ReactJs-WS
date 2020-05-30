@@ -5,84 +5,115 @@ export const Container = styled.div`
   max-width: 1180px;
   padding: 0 30px;
   margin: 32px auto;
+`;
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+export const ContainerGrid = styled.div`
+  margin-top: 32px;
 
-    span {
-      color: #fff;
-      font-weight: bold;
-      font: 30px "Rototo", sans-serif;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  main {
+    width: 20%;
+    background: #fff;
+    padding: 14px;
+    border-radius: 8px;
+    position: relative;
+    margin: 0 0 0 10px;
+
+    strong {
+      display: block;
+      margin-bottom: 12px;
+      color: #41414d;
     }
 
-    img {
-      height: 64px;
+    p + strong {
+      margin-top: 15px;
+    }
+
+    p {
+      color: #737380;
+      line-height: 1px;
+      font-size: 16px;
+    }
+  }
+`;
+
+export const Header = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    color: #fff;
+    font-weight: bold;
+    font: 30px "Rototo", sans-serif;
+  }
+
+  img {
+    height: 64px;
+  }
+
+  button {
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    border: 1px solid #dcdce6;
+    color: white;
+    background: transparent;
+    margin: 0 0 5px 16px;
+    transition: border-color 0.2s;
+  }
+  button:hover {
+    border-color: #999;
+  }
+`;
+
+export const Grid = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  list-style: none;
+
+  li {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    position: relative;
+
+    .button2 {
+      right: 70px;
     }
 
     button {
-      height: 60px;
-      width: 60px;
-      border-radius: 4px;
-      border: 1px solid #dcdce6;
       background: transparent;
-      margin: 0 0 5px 16px;
-      transition: border-color 0.2s;
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      border: 0;
+      transition: opacity 0.2s;
     }
+
     button:hover {
-      border-color: #999;
+      opacity: 0.5;
     }
-  }
 
-  h1 {
-    margin-top: 80px;
-    margin-bottom: 24px;
-  }
-  ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-    list-style: none;
+    strong {
+      display: block;
+      margin-bottom: 12px;
+      color: #41414d;
+    }
 
-    li {
-      background: #fff;
-      padding: 24px;
-      border-radius: 8px;
-      position: relative;
+    p + strong {
+      margin-top: 15px;
+    }
 
-      .button2 {
-        right: 70px;
-      }
-
-      button {
-        background: transparent;
-        position: absolute;
-        right: 24px;
-        top: 24px;
-        border: 0;
-        transition: opacity 0.2s;
-      }
-
-      button:hover {
-        opacity: 0.5;
-      }
-
-      strong {
-        display: block;
-        margin-bottom: 12px;
-        color: #41414d;
-      }
-
-      p + strong {
-        margin-top: 15px;
-      }
-
-      p {
-        color: #737380;
-        line-height: 1px;
-        font-size: 16px;
-      }
+    p {
+      color: #737380;
+      line-height: 1px;
+      font-size: 16px;
     }
   }
 `;

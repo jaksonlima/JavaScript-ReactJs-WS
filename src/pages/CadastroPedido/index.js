@@ -8,7 +8,7 @@ import { Container } from "./styles";
 import { pedidoStatePedidoSucess } from "../../store/modules/pedido/actions";
 import history from "../../services/history";
 
-export default function CadastroProduto() {
+export default function CadastroPedido() {
   const dispatch = useDispatch();
 
   const schema = Yup.object().shape({
@@ -25,9 +25,9 @@ export default function CadastroProduto() {
       .required("E-mail é obrigatorio"),
   });
 
-  function handleSubmit(props) {
-    if (props) {
-      dispatch(pedidoStatePedidoSucess(props));
+  function handleSubmit(pedido) {
+    if (pedido) {
+      dispatch(pedidoStatePedidoSucess({ ...pedido, status: true }));
       toast.success("Cadastro pedido realizado com sucesso");
     }
   }

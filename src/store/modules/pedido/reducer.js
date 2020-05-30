@@ -31,14 +31,14 @@ export default function pedido(state = INITIAL_STATE, action) {
         break;
       }
       case "@pedido/STATE_PRODUTO_EDITAR": {
-        console.log(action.payload);
+        draft.produtos.splice(
+          draft.produtos.findIndex(
+            (produto) => produto.id === action.payload.id
+          ),
+          1
+        );
 
-        const data =
-          draft.produtos[
-            draft.produtos.findIndex((todo) => todo.id === action.payload.id)
-          ];
-
-        console.log(data);
+        draft.produtos.push({ ...action.payload });
         break;
       }
     }

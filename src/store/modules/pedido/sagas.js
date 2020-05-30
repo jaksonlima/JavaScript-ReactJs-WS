@@ -4,9 +4,14 @@ import { toast } from "react-toastify";
 import { apiPort } from "../../../services/api";
 import { pedidoRequestInSucess } from "./actions";
 
-export function* requestIn({ payload: pedido }) {
+export function* requestIn({ payload }) {
   try {
-    const reponse = yield call(apiPort("8080").put, "pedido", { ...pedido });
+    const { pedido, produtos } = payload;
+
+    const reponse = yield call(apiPort("8080").put, "pedido", {
+      ...pedido,
+      pedidoItems: [...produtos],
+    });
 
     if (reponse && reponse.status === 201) {
       yield put(pedidoRequestInSucess(reponse.data));

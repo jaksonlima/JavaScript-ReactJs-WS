@@ -58,7 +58,6 @@ export default function TransitionsModal({ isView, idProduto }) {
   });
 
   function handleSubmit(produto) {
-    console.log(produto);
     if (produto) {
       const calculoTotal = produto.preco * produto.quantidade;
 

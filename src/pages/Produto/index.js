@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 
 import { Container } from "./styles";
 import { Button } from "../../styles/button";
 import history from "../../services/history";
-import {
-  pedidoStateProdutoSucess,
-  pedidoRequestInRequest,
-} from "../../store/modules/pedido/actions";
+import { pedidoStateProdutoSucess } from "../../store/modules/pedido/actions";
 import { handleFormatacaoMonetaria } from "../../utils/util";
 
 export default function Produto() {
@@ -43,16 +40,6 @@ export default function Produto() {
     }
   }
 
-  const cadastroPedido = useSelector((state) => state.cadastroPedido);
-
-  function handleFinalizaPedido() {
-    if (cadastroPedido === null || cadastroPedido.produtos.length === 0) {
-      toast.error("Cadastro pedido é obrigatorio.");
-      return;
-    }
-    dispatch(pedidoRequestInRequest(cadastroPedido));
-  }
-
   function handleCadastroProduto() {
     history.push("/cadastro");
   }
@@ -83,9 +70,7 @@ export default function Produto() {
           Cadastrar
         </Button>
       </Form>
-      <Button type="button" color="#2ed961" onClick={handleFinalizaPedido}>
-        Finalizar
-      </Button>
+
       <Button type="button" color="#2ed961" onClick={handleProdutos}>
         Meu Carrinho
       </Button>
