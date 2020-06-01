@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TransitionsModal({ isView, idProduto }) {
+export default function TransitionsModal({ isView, idProduto, callViewModal }) {
   const [total, setTotal] = useState(Number);
   const [open, setOpen] = useState(false);
   const [produto, setProduto] = useState();
@@ -37,7 +37,7 @@ export default function TransitionsModal({ isView, idProduto }) {
 
   useEffect(() => {
     setOpen(isView);
-  }, [isView]);
+  }, []);
 
   useEffect(() => {
     const produto = produtos.filter((pedido) => pedido.id === idProduto);
@@ -48,13 +48,14 @@ export default function TransitionsModal({ isView, idProduto }) {
   }, [produtos]);
 
   const handleClose = () => {
+    callViewModal();
     setOpen(false);
   };
 
   const schema = Yup.object().shape({
     produto: Yup.string().required("Nome Produto é obrigatorio"),
-    quantidade: Yup.string().required("Quantidade é obrigatorio"),
-    preco: Yup.string().required("Preço é obrigatorio"),
+    quantidade: Yup.number().required("Quantidade é obrigatorio"),
+    preco: Yup.number().required("Preço é obrigatorio"),
   });
 
   function handleSubmit(produto) {

@@ -10,7 +10,12 @@ export function* requestIn({ payload }) {
 
     const reponse = yield call(apiPort("8080").put, "pedido", {
       ...pedido,
-      pedidoItems: [...produtos],
+      pedidoItens: [...produtos].map((pedidoItem) => {
+        return {
+          ...pedidoItem,
+          id: null,
+        };
+      }),
     });
 
     if (reponse && reponse.status === 201) {

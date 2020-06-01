@@ -1,4 +1,4 @@
-import { call, put, select, all, takeLatest } from "redux-saga/effects";
+import { call, put, all, takeLatest } from "redux-saga/effects";
 import { toast } from "react-toastify";
 
 import api from "../../../services/api";

@@ -7,22 +7,6 @@
       "provider": true,
       "token": 3,
       "id": 1
-    },
-    {
-      "name": "bruna",
-      "email": "",
-      "password": "",
-      "provider": true,
-      "token": 5,
-      "id": 2
-    },
-    {
-      "name": "jakson lima",
-      "email": "jaksonsneider@hotmail.com",
-      "password": "123456789",
-      "provider": true,
-      "token": 4,
-      "id": 3
     }
   ],
   "sessions": [],
@@ -30,7 +14,7 @@
     {
       "id": 1,
       "user": 1,
-      "content": "Nova agendamento de Jakson Cliente para dia 4 de março, ás 18:30h.",
+      "content": "Nova agendamento de WS Cliente para dia 4 de março, ás 18:30h.",
       "createAt": "2020-03-04T19:15:56.112Z",
       "updateAt": "2020-03-04T19:15:56.112Z",
       "read": false
@@ -38,7 +22,7 @@
     {
       "id": 2,
       "user": 1,
-      "content": "Nova agendamento de Jakson Cliente para dia 4 de março, ás 18:30h.",
+      "content": "Nova agendamento de WS Cliente para dia 4 de março, ás 18:30h.",
       "createAt": "2020-03-04T19:15:56.112Z",
       "updateAt": "2020-03-04T19:15:56.112Z",
       "read": false
@@ -46,7 +30,7 @@
     {
       "id": 3,
       "user": 1,
-      "content": "Nova agendamento de Jakson Cliente para dia 4 de março, ás 18:30h.",
+      "content": "Nova agendamento de WS Cliente para dia 4 de março, ás 18:30h.",
       "createAt": "2020-03-04T19:15:56.112Z",
       "updateAt": "2020-03-04T19:15:56.112Z",
       "read": false
@@ -72,7 +56,7 @@
       "user_id": 1,
       "provider_id": 3,
       "user": {
-        "name": "Jakson Wilson Bonfim de Lima"
+        "name": "WS"
       }
     },
     {
@@ -86,7 +70,7 @@
       "user_id": 1,
       "provider_id": 3,
       "user": {
-        "name": "Jakson Wilson Bonfim de Lima"
+        "name": "WS"
       }
     },
     {
@@ -100,7 +84,7 @@
       "user_id": 1,
       "provider_id": 3,
       "user": {
-        "name": "Jakson Wilson Bonfim de Lima"
+        "name": "WS"
       }
     },
     {
@@ -114,7 +98,7 @@
       "user_id": 1,
       "provider_id": 3,
       "user": {
-        "name": "Jakson Wilson Bonfim de Lima"
+        "name": "WS"
       }
     },
     {
@@ -128,7 +112,7 @@
       "user_id": 1,
       "provider_id": 3,
       "user": {
-        "name": "Jakson Wilson Bonfim de Lima"
+        "name": "WS"
       }
     },
     {
@@ -142,7 +126,7 @@
       "user_id": 1,
       "provider_id": 3,
       "user": {
-        "name": "Jakson Wilson Bonfim de Lima"
+        "name": "WS"
       }
     }
   ]

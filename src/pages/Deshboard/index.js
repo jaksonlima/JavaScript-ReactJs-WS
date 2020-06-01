@@ -1,5 +1,4 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { useSelector } from "react-redux";
 import {
   format,
   subDays,
@@ -20,12 +19,11 @@ import history from "../../services/history";
 import { Container, Time } from "./styles";
 import api from "../../services/api";
 
-const range = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+const range = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
 export default function Deshboard() {
   const [schedule, setSchedules] = useState([]);
   const [date, setDate] = useState(new Date());
-  const [pedidos, setPedidos] = useState([]);
 
   const dataFormatted = useMemo(
     () => format(date, "d 'de' MMMM", { locale: pt }),
@@ -56,12 +54,6 @@ export default function Deshboard() {
 
     loadSchedule();
   }, [date]);
-
-  const ped = useSelector((state) => state.cadastroPedido);
-
-  useEffect(() => {
-    setPedidos(ped);
-  }, [pedidos]);
 
   function handlePrevDay() {
     setDate(subDays(date, 1));

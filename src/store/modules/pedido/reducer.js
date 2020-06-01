@@ -9,8 +9,10 @@ export default function pedido(state = INITIAL_STATE, action) {
   return produce(state, (draft) => {
     switch (action.type) {
       case "@pedido/REQUEST_IN_SUCESS": {
-        // draft.pedido = { ...action.payload };
-        // draft.produtos.push({ ...action.payload });
+        const { pedidoItens, ...pedido } = action.payload;
+
+        draft.pedido = { ...pedido };
+        draft.produtos = [...pedidoItens];
         break;
       }
       case "@pedido/STATE_PEDIDO_SUCESS": {
@@ -41,6 +43,7 @@ export default function pedido(state = INITIAL_STATE, action) {
         draft.produtos.push({ ...action.payload });
         break;
       }
+      default:
     }
   });
 }

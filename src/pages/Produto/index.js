@@ -17,8 +17,8 @@ export default function Produto() {
 
   const schema = Yup.object().shape({
     produto: Yup.string().required("Nome Produto é obrigatorio"),
-    quantidade: Yup.string().required("Quantidade é obrigatorio"),
-    preco: Yup.string().required("Preço é obrigatorio"),
+    quantidade: Yup.number().required("Quantidade é obrigatorio"),
+    preco: Yup.number().required("Preço é obrigatorio"),
   });
 
   function handleSubmit(produto) {
@@ -31,8 +31,8 @@ export default function Produto() {
         pedidoStateProdutoSucess({
           ...produto,
           total: calculoTotal,
-          id: Math.random(),
           statusPedido: true,
+          id: Math.random(),
         })
       );
 

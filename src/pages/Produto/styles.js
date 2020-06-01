@@ -50,6 +50,7 @@ export const Container = styled.div`
       padding: 0 15px;
       color: #fff;
       margin: 0 0 10px;
+      list: none;
 
       &::placeholder {
         color: rgb(255, 255, 255, 0.7);
