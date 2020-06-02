@@ -7,7 +7,7 @@ import Notifications from "../Notifications/index";
 import logoPurple from "../../assets/logo-purple.svg";
 import { Container, Content, Profile } from "./styles";
 import api from "../../services/api";
-import profile from "../../assets/profile.png";
+import profile from "../../assets/do-utilizador.svg";
 
 export default function Header() {
   const [image, setImage] = useState("");

@@ -3,7 +3,7 @@ import { useField } from "@rocketseat/unform";
 
 import api from "../../../services/api";
 import { Container } from "./styles";
-import profile from "../../../assets/profile.png";
+import profile from "../../../assets/do-utilizador.svg";
 
 export default function AvatarInput() {
   const { defaultValue, registerField } = useField("avatar");

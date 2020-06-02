@@ -101,7 +101,7 @@ export default function CardProdutos() {
     <>
       <Container>
         <Header>
-          <span>Seja Bem vindo</span>
+          <span>CHECKOUT</span>
 
           <div>
             <button

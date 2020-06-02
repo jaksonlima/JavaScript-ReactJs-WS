@@ -73,25 +73,24 @@ export const Header = styled.header`
 
 export const Grid = styled.ul`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
-  list-style: none;
+  grid-template-columns: repeat(3, 29vh);
+  grid-gap: 12px;
 
   li {
     background: #fff;
-    padding: 24px;
+    padding: 14px;
     border-radius: 8px;
     position: relative;
 
     .button2 {
-      right: 70px;
+      right: 50px;
     }
 
     button {
       background: transparent;
       position: absolute;
-      right: 24px;
-      top: 24px;
+      right: 10px;
+      top: 10px;
       border: 0;
       transition: opacity 0.2s;
     }
@@ -107,13 +106,13 @@ export const Grid = styled.ul`
     }
 
     p + strong {
-      margin-top: 15px;
+      margin-top: 14px;
     }
 
     p {
       color: #737380;
-      line-height: 1px;
-      font-size: 16px;
+      line-height: 10px;
+      font-size: 15px;
     }
   }
 `;
