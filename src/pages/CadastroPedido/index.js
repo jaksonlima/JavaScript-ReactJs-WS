@@ -1,5 +1,4 @@
 import React from "react";
-import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
@@ -7,6 +6,9 @@ import { toast } from "react-toastify";
 import { Container } from "./styles";
 import { pedidoStatePedidoSucess } from "../../store/modules/pedido/actions";
 import history from "../../services/history";
+import InputMask from "../../components/InputMask";
+import Input from "../../components/Input";
+import { Form } from "@unform/web";
 
 export default function CadastroPedido() {
   const dispatch = useDispatch();
@@ -44,9 +46,13 @@ export default function CadastroPedido() {
 
       <Form schema={schema} onSubmit={handleSubmit}>
         <Input name="razaoSocial" placeholder="Razão Social" />
-        <Input name="cnpj" placeholder="CNPJ 00.0000.000/0000-00" />
+        <InputMask name="cnpj" placeholder="CNPJ" mask="99.9999.99/9999-99" />
         <Input name="email" type="email" placeholder="Email" />
-        <Input name="telefone" placeholder="Telefone" />
+        <InputMask
+          name="telefone"
+          placeholder="Telefone"
+          mask="(99) 99999-9999"
+        />
 
         <button type="submit">Cadastrar</button>
       </Form>

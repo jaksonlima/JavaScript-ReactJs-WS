@@ -62,6 +62,7 @@ export default function Produto() {
         <Input name="produto" placeholder="Produto" />
         <Input name="quantidade" type="number" placeholder="Quantidade" />
         <Input name="preco" type="number" placeholder="Preço" />
+
         <span style={{ color: "#ebd634" }}>
           Total: {handleFormatacaoMonetaria(total)}
         </span>
